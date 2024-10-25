@@ -52,7 +52,7 @@ sudo pacman -S htop btop wget brightnessctl tree nload
 
 
 # Nvim deps
-sudo pacman -S fd  wl-clipboard git
+sudo pacman -S fd  wl-clipboard git less
 
 # Vscode
 sudo pacman -S code

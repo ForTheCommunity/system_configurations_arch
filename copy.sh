@@ -11,8 +11,8 @@ echo "________________Copying InstallationLogs_____________________"
 cp -v arch_ins_logs.sh system_configurations_arch/InstallationLogs
 
 # Copy Hyprland Configs
-echo "________________Copying Sway Configs_____________________"
-cp -v .config/hypr/* system_configurations_arch/Hyprland
+echo "________________Copying Hyprland Configs_____________________"
+cp -rv .config/hypr/* system_configurations_arch/Hyprland
 
 
 # Copy Terminator Config
