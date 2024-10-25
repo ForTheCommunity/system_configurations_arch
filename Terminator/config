@@ -1,0 +1,18 @@
+[global_config]
+  tab_position = right
+[keybindings]
+  split_horiz = <Shift>h
+  split_vert = <Shift>v
+[profiles]
+  [[default]]
+    background_darkness = 0.75
+    background_type = transparent
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+[plugins]

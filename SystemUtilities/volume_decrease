@@ -1,0 +1,9 @@
+#/bin/bash
+
+pactl set-sink-volume @DEFAULT_SINK@ -10% 
+
+pactl get-sink-volume @DEFAULT_SINK@
+
+
+echo "Volume Decreased By 10%"
+

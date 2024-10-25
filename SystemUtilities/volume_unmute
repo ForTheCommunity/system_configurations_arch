@@ -1,0 +1,8 @@
+#/bin/bash
+
+pactl set-sink-mute @DEFAULT_SINK@ 0
+
+pactl get-sink-volume @DEFAULT_SINK@
+
+
+echo "Volume Unmuted."

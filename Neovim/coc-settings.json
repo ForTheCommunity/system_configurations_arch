@@ -1,0 +1,30 @@
+{
+  "languageserver": {
+    "rust-analyzer": {
+      "command": "rust-analyzer",
+      "filetypes": ["rust"],
+      "rootPatterns": ["Cargo.toml"],
+      "initializationOptions": {}
+    },
+
+  "clangd": {
+	    "command": "clangd-16",
+	    "rootPatterns": ["Makefile",".git/"],
+	    "filetypes": ["c", "cpp", "objc", "objcpp"],
+	    "initializationOptions": {
+        	"clangdFileStatus": true
+	  }
+    },
+
+    
+  "cmake": {
+	    "command": "~/python_virtual_env/bin/cmake-language-server",
+	    "rootPatterns": ["CMakeLists.txt","Makefile",".git/","builds"],
+	    "filetypes": ["cmake"],
+	    "initializationOptions": {}
+    },
+
+  },
+ "coc.preferences.formatOnSaveFiletypes": ["rust","c","cpp","dart"],
+}
+

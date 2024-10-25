@@ -1,0 +1,13 @@
+#/bin/bash
+
+echo "Enter Volume in Percentage .ie. 50% , 40% , 80% ...."
+echo "_______________________________________________________________"
+echo "---------------------------------------------------------------"
+
+echo "Enter Specific Volume :- "
+
+read volume
+
+pactl set-sink-volume @DEFAULT_SINK@ $volume
+
+pactl get-sink-volume @DEFAULT_SINK@

@@ -1,0 +1,16 @@
+#/bin/bash
+
+# Create Mounting Point.
+sudo mkdir -p /media/disks/HardDisk
+
+
+lsblk
+
+echo "_____Enter HardDisk Name / Partition to Mount :-  "
+
+read harddisk_partition
+
+
+echo   $harddisk_partition
+
+sudo mount -t ext4 /dev/$harddisk_partition /media/disks/HardDisk
