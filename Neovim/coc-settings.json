@@ -4,17 +4,31 @@
       "command": "rust-analyzer",
       "filetypes": ["rust"],
       "rootPatterns": ["Cargo.toml"],
-      "initializationOptions": {}
+      "initializationOptions": {
+	      "diagnostics": true, 
+	      "lint": true
+	}
     },
 
   "clangd": {
-	    "command": "clangd-16",
+	    "command": "clangd",
 	    "rootPatterns": ["Makefile",".git/"],
 	    "filetypes": ["c", "cpp", "objc", "objcpp"],
 	    "initializationOptions": {
         	"clangdFileStatus": true
 	  }
     },
+
+    "zls": {
+	    "command": "zls",
+	    "rootPatterns": ["Makefile",".git/"],
+	    "filetypes": ["zig"],
+	    "initializationOptions": {
+		    "diagnostics": true, 
+		    "lint": true
+	    }
+    },
+
 
     
   "cmake": {
@@ -25,6 +39,6 @@
     },
 
   },
- "coc.preferences.formatOnSaveFiletypes": ["rust","c","cpp","dart"],
+ "coc.preferences.formatOnSaveFiletypes": ["rust","c","cpp","dart","zig"],
 }
 

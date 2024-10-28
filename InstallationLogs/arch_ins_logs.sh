@@ -52,7 +52,7 @@ sudo pacman -S htop btop wget brightnessctl tree nload
 
 
 # Nvim deps
-sudo pacman -S fd  wl-clipboard git less
+sudo pacman -S fd  wl-clipboard git less git-lfs
 
 # Vscode
 sudo pacman -S code
@@ -64,3 +64,28 @@ sudo pacman -S code
 # Installing RUST
 # curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 # rustup component add rust-analyzer
+
+# Install Clang and ClangD....
+sudo pacman -S clang
+
+# Zig & Zls
+sudo pacman -S zig zls
+
+# Vlc
+sudo pacman -Syu
+sudo pacman -S vlc
+
+# OBS Studio
+sudo pacman -S obs-studio pipewire pipewire-pulse xdg-desktop-portal-hyprland
+pacman -S audacity
+
+
+# Pactree - to see does any other package depends on certain package or not..
+pacman -S pacman-contrib
+
+
+# SSH
+pacman -S openssh
+
+#Gnu-Stow
+pacman -S stow
