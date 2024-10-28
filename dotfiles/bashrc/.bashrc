@@ -42,7 +42,7 @@ alias nvim='$OTHER_BINARIES_DIR/nvim-linux64/bin/nvim'
 
 
 # Custom Binaries
-export PATH=$PATH:~/custom_binaries
+export PATH=$PATH:~/directly_executable_binaries
 
 # Cargo Custom Build Target
 export CARGO_TARGET_DIR=/tmp/cargo-target
