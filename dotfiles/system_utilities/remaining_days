@@ -1,0 +1,38 @@
+#!/bin/bash
+
+# Define color codes
+DARK_BOLD_GREEN_ON_BLACK='\033[1;32;40m' 
+BOLD_RED_ON_BLACK='\033[1;31;40m' 
+BOLD_GREEN_ON_BLACK='\033[1;32;40m' 
+BOLD_CYAN_ON_BLACK='\033[1;36;40m'
+NC='\033[0m' # No Color
+
+# Get the current date
+current_date=$(date +%Y-%m-%d)
+
+# Get the current year
+current_year=$(date +%Y)
+
+# Define the next New Year date
+next_new_year="$((current_year + 1))-01-01"
+
+# Calculate the difference in seconds
+current_seconds=$(date -d "$current_date" +%s)
+new_year_seconds=$(date -d "$next_new_year" +%s)
+diff_seconds=$((new_year_seconds - current_seconds))
+
+# Calculate days and months remaining
+days_remaining=$((diff_seconds / 86400))
+months_remaining=$((days_remaining / 30))
+
+# printing
+echo ""
+echo -e "   ${BOLD_GREEN_ON_BLACK}                                        ${NC}"
+echo -e "   ${DARK_BOLD_GREEN_ON_BLACK} _________Welcome Back , Boss________   ${NC}";
+echo -e "   ${BOLD_GREEN_ON_BLACK}                                        ${NC}"
+echo -e "   ${BOLD_GREEN_ON_BLACK}  Today's Date --->> $current_date         ${NC}"
+echo -e "   ${BOLD_CYAN_ON_BLACK}  Next New Year --->> $next_new_year        ${NC}  "
+echo -e "   ${BOLD_RED_ON_BLACK}  Days Remaining --->> $days_remaining               ${NC}"
+echo -e "   ${BOLD_RED_ON_BLACK}  Approximate Months Remaining --->> $months_remaining  ${NC}"
+echo -e "   ${BOLD_GREEN_ON_BLACK}                                        ${NC}"
+echo ""

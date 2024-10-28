@@ -12,9 +12,9 @@ alias grep='grep --color=auto'
 
 # ________________Custom Configs_______________________________
 
-# Greetings
-echo "_____ Welcome Back , Boss ,,____________";
-echo "___________Your Kingdom is Ready____________";
+
+# Load Custom Script..
+sh ~/system_configurations_arch/dotfiles/system_utilities/remaining_days
 
 # customs
 #PS1='[\u@\h \W]\$ '
