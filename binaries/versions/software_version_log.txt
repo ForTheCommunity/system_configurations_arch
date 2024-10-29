@@ -1,0 +1,30 @@
+______NeoVim Version_____
+NVIM v0.10.2
+Build type: RelWithDebInfo
+LuaJIT 2.1.1727870382
+Run "nvim -V1 -v" for more info
+________________________________________________
+______Helix Version_____
+helix 24.7
+________________________________________________
+______Alacritty Version_____
+alacritty 0.14.0 (22a44757)
+________________________________________________
+______Hyprland Version_____
+Hyprland, built from branch  at commit 4520b30d498daca8079365bdb909a8dea38e8d55  (version: bump to 0.44.1).
+Date: Wed Oct 9 12:54:39 2024
+Tag: v0.44.1, commits: 5309
+built against aquamarine 0.4.3
+
+
+flags: (if any)
+________________________________________________
+______Hyprpaper Version_____
+hyprpaper 0.7.1-2
+________________________________________________
+______Waybar Version_____
+Waybar v0.11.0
+________________________________________________
+______Terminator Version_____
+terminator 2.1.4
+________________________________________________

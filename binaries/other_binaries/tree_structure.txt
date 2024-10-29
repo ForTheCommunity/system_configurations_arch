@@ -1,4 +1,4 @@
 other_binaries/
-└── nvim-linux64
+└── Telegram
 
 2 directories, 0 files

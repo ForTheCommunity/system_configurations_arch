@@ -51,8 +51,8 @@ sudo pacman -S neofetch
 sudo pacman -S htop btop wget brightnessctl tree nload
 
 
-# Nvim deps
-sudo pacman -S fd  wl-clipboard git less git-lfs
+# Editors/Ides and theirs deps
+sudo pacman -S fd  wl-clipboard git less git-lfs neovim helix
 
 # Vscode
 sudo pacman -S code
@@ -74,6 +74,9 @@ sudo pacman -S zig zls
 # Vlc
 sudo pacman -Syu
 sudo pacman -S vlc
+
+# Mpv
+sudo pacman -S mpv
 
 # OBS Studio
 sudo pacman -S obs-studio pipewire pipewire-pulse xdg-desktop-portal-hyprland

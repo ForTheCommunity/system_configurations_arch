@@ -1,0 +1,47 @@
+[language-server.rust_analyzer]
+command = "rust-analyzer"
+
+[[language]]
+name = "rust"
+auto-format = true
+file-types = ["rs"]
+roots = ["Cargo.toml"]
+comment-tokens = ["//"]
+formatter = { command = "cargo fmt" , args = ["--stdin"] }
+language-servers = [ "rust_analyzer" ]
+
+
+
+
+[language-server.zls]
+command = "zls"
+
+[[language]]
+name = "zig"
+auto-format = true
+file-types = ["zig"]
+roots = [".git","."]
+formatter = { command = "zig fmt" , args = ["--assume-filename=%"] }
+language-servers = [ "zls" ]
+
+
+
+[language-server.c_cpp]
+command = "clangd"
+
+[[language]]
+name = "c"
+auto-format = true
+file-types = ["c"]
+roots = [".git","."]
+formatter = { command = "clang-format" , args = ["--assume-filename=%"] }
+language-servers = [ "c_cpp" ]
+
+
+[[language]]
+name = "cpp"
+auto-format = true
+file-types = ["cpp"]
+roots = [".git", "."]
+formatter = { command = "clang-format" , args = ["--assume-filename=%"] }
+language-servers = ["c_cpp"]
