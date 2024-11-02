@@ -26,7 +26,8 @@ vim.cmd [[
   Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
   Plug 'windwp/nvim-autopairs'
   Plug 'rafi/awesome-vim-colorschemes'
- call plug#end()
+  Plug 'vimwiki/vimwiki' 
+  call plug#end()
 ]]
 
 
