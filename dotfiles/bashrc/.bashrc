@@ -40,6 +40,7 @@ alias signal='flatpak run org.signal.Signal'
 alias a=Hyprland
 alias nvim1='$OTHER_BINARIES_DIR/nvim-linux64/bin/nvim'
 alias telegram='$OTHER_BINARIES_DIR/Telegram/Telegram'
+alias zig='$OTHER_BINARIES_DIR/Zig/zig'
 
 # Custom Binaries
 export PATH=$PATH:~/directly_executable_binaries

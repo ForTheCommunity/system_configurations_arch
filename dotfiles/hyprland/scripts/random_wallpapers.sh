@@ -1,8 +1,8 @@
 #!/bin/bash
 # Select a random wallpaper from the ~/Pictures/Wallpapers directory
 WALLPAPER_DIR=~/system_configurations_arch/Wallpapers
-RANDOM_WALLPAPER=$(find "$WALLPAPER_DIR" -type f -name "*.png" -o -name "*.jpg" | shuf -n 1)
-
+#RANDOM_WALLPAPER=$(find "$WALLPAPER_DIR" -type f -name "*.png" -o -name "*.jpg" | shuf -n 1)
+RANDOM_WALLPAPER=$(find "$WALLPAPER_DIR" -type f \( -name "*.png" -o -name "*.jpg" -o -name "*.jpeg" \) | shuf -n 1)
 # echo $RANDOM_WALLPAPER
 #pwd 
 

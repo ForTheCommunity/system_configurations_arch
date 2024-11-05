@@ -1,4 +1,14 @@
 #/bin/bash
 
-read -p "File Name of Image : " file_name
-grim -g "$(slurp)" $file_name
+# directory where screenshots will be saved
+SAVE_DIR=~/Pictures/Screenshots
+
+# Create the directory if it doesn't exist
+mkdir -p "$SAVE_DIR"
+
+
+# Generate a unique filename with the current date and time
+FILE_NAME="screenshot_$(date +'%Y-%m-%d_%H-%M-%S').png"
+
+# using slurp with grim so that slurp will help to select specific region..
+grim -g "$(slurp)" -t png -l 0 -c "$SAVE_DIR/$FILE_NAME"
