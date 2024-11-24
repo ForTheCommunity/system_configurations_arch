@@ -1,7 +1,14 @@
 # just installed arch minimal
 
+# This is not a Shell script ,, this is just a Log file for softwares that i installed 
+# using different methods...
+
 # installing hyprland WM.
 sudo pacman -S  hyprland hyprpaper  rofi swww waybar
+
+# Notification on Wayland using Mako daemon and notify-send
+sudo pacman -S mako
+
 
 # installing fonts
 sudo pacman -S noto-fonts ttf-dejavu
@@ -43,7 +50,7 @@ sudo pacman -S flatpak
 # flatpak install flathub org.signal.Signal
 # flatpak install flathub org.inkscape.Inkscape
 # flatpak install flathub org.kde.okular
-
+# flatpak install flathub io.gitlab.librewolf-community
 
 sudo pacman -S nano vim
 
@@ -106,3 +113,11 @@ sudo pacman -S ufw
 
 # Basic Calculator (Cli)
 sudo pacman -S bc 
+
+
+# qbittorrent
+sudo pacman -S qbittorrent
+
+
+# Unzip
+pacman -S unzip

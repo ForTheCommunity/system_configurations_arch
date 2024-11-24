@@ -28,6 +28,10 @@ export PATH=$PATH:~/system_utils
 # OTHER Binaries Directory
 OTHER_BINARIES_DIR="$HOME/other_binaries"
 
+# Custom Aliases
+alias telegram='$OTHER_BINARIES_DIR/Telegram/Telegram'
+alias a=Hyprland
+
 
 # Flatpak
 alias firefox='flatpak run org.mozilla.firefox'
@@ -36,11 +40,7 @@ alias okular='flatpak run org.kde.okular'
 alias signal='flatpak run org.signal.Signal'
 
 
-# Custom Aliases 
-alias a=Hyprland
-alias nvim1='$OTHER_BINARIES_DIR/nvim-linux64/bin/nvim'
-alias telegram='$OTHER_BINARIES_DIR/Telegram/Telegram'
-alias zig='$OTHER_BINARIES_DIR/Zig/zig'
+
 
 # Custom Binaries
 export PATH=$PATH:~/directly_executable_binaries

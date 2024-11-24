@@ -1,0 +1,29 @@
+#!/bin/sh
+
+# Infinite Loop
+while true
+do
+
+# To send notifictaion on Active Window...
+export DISPLAY=:0
+
+battery_percentage=$(cat /sys/class/power_supply/BAT0/capacity)
+battery_status=$(cat /sys/class/power_supply/BAT0/status)
+
+# echo "testing"
+# echo $battery_percentage
+# echo $battery_status
+# echo "testing"
+
+
+if [ -n "$battery_status" ]; then
+	if [ $battery_percentage -le 20 ]; then
+		notify-send -u critical "Emergency" "Battery level is $battery_percentage % - $battery_status"
+	fi
+fi
+
+
+# sleep for minutes..
+sleep 300
+# Infinite Loop
+done
