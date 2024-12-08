@@ -66,15 +66,16 @@
     },
 
     "network": {
-    "interface": "wlp0s20f0u2",
+    "interface": ["wlp0s20f0u2","eth0"],
     "format-icons": ["\udb82\udd2f", "\udb82\udd1f", "\udb82\udd22", "\udb82\udd25", "\udb82\udd28"],
     "format-wifi": "{icon}   {essid} | {bandwidthDownBytes} \u2193 | {bandwidthUpBytes} \u2191",
-    "format-ethernet": "{icon}   {essid} | {bandwidthDownBytes} \u2193 | {bandwidthUpBytes} \u2191",
+    "format-ethernet": "\uf0e8   {essid} | {bandwidthDownBytes} \u2193 | {bandwidthUpBytes} \u2191",
     "format-linked": "(No IP)",
     "format-disconnected": "",
     "on-click": "alacritty -e nload -u M",
     "tooltip": true,
     "tooltip-format-wifi": " SSID -> {essid} | Signal Strength -> ({signalStrength}%)",
+    "tooltip-format-ethernet": " Ethernet Connection",
     "interval": 2
 },
 

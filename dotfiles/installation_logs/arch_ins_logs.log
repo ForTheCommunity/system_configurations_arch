@@ -121,3 +121,7 @@ sudo pacman -S qbittorrent
 
 # Unzip
 pacman -S unzip
+
+# Libreoffice
+pacman -S libreoffice-fresh
+
