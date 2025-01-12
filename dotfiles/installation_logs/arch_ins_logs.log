@@ -28,6 +28,12 @@ sudo pacman -S grim slurp
 # installing terminals
 sudo pacman -S terminator
 sudo pacman -S alacritty zellij
+# Yazi
+sudo pacman -S yazi ffmpeg p7zip jq poppler fd ripgrep fzf zoxide imagemagick
+#For image Preview in Yazi :
+pacman -S ueberzugpp
+# LSD
+pacman -S lsd
 
 
 # file manager
@@ -115,13 +121,30 @@ sudo pacman -S ufw
 sudo pacman -S bc 
 
 
-# qbittorrent
+# Torrent
 sudo pacman -S qbittorrent
-
+sudo pacman -S rtorrent xterm
 
 # Unzip
 pacman -S unzip
+pacman -S p7zip
+
 
 # Libreoffice
 pacman -S libreoffice-fresh
 
+# Opensource build of Vscode
+pacman -S code
+# installed Rust Analyzer , Flutter Extension
+# Flutter Dependencies
+pacman -S ninja cmake
+
+
+# DNS Resolver 
+pacman -S dog
+
+# Cheese
+flatpak install flathub org.gnome.Cheese
+
+# Matrix Like Effect
+pacman -S cmatrix
