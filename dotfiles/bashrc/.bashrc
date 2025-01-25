@@ -30,16 +30,19 @@ OTHER_BINARIES_DIR="$HOME/other_binaries"
 
 # Custom Aliases
 alias telegram='$OTHER_BINARIES_DIR/Telegram/Telegram'
+alias notes='$OTHER_BINARIES_DIR/FuzPad/bin/fuzpad'
+
 alias a=Hyprland
-alias ls="lsd -l"
+alias cat="bat"
+alias ls="lsd"
+alias l="lsd -l"
 alias fm=yazi
+alias hx=helix
 
 # Flatpak
 alias firefox='flatpak run org.mozilla.firefox'
 alias inkscape='flatpak run org.inkscape.Inkscape'
 alias okular='flatpak run org.kde.okular'
-alias signal='flatpak run org.signal.Signal'
-
 
 # Custom Binaries
 export PATH=$PATH:~/directly_executable_binaries
