@@ -29,8 +29,9 @@ export PATH=$PATH:~/system_utils
 OTHER_BINARIES_DIR="$HOME/other_binaries"
 
 # Custom Aliases
-alias telegram='$OTHER_BINARIES_DIR/Telegram/Telegram'
 alias notes='$OTHER_BINARIES_DIR/FuzPad/bin/fuzpad'
+alias rr='$OTHER_BINARIES_DIR/RustRover/RustRover-2024.3.4/bin/rustrover'
+
 
 alias a=Hyprland
 alias cat="bat"
@@ -40,9 +41,12 @@ alias fm=yazi
 alias hx=helix
 
 # Flatpak
-alias firefox='flatpak run org.mozilla.firefox'
-alias inkscape='flatpak run org.inkscape.Inkscape'
-alias okular='flatpak run org.kde.okular'
+
+# alias inkscape='flatpak run org.inkscape.Inkscape'
+# alias gimp='flatpak run org.gimp.GIMP'
+# alias okular='flatpak run org.kde.okular'
+# alias podcasts='flatpak run flathub org.gnome.Podcasts'
+
 
 # Custom Binaries
 export PATH=$PATH:~/directly_executable_binaries

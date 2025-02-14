@@ -1,0 +1,29 @@
+#!/bin/sh
+
+
+# Infinite Loop
+while true
+do
+
+
+# Fetches Header only in Silent Mode &
+# pipe it to head utility for getting only first line of the Response
+RESULT=$(curl -Is https://www.debian.org | head -n 1)
+# Result will look like this --> " HTTP/2 200 " , if internet is working..
+
+# Check if the status code contains "200"
+if echo "$RESULT" | grep -q "200"; then
+    echo "Internet is working"
+    notify-send -u critical "Alert" "Internet is Working" -t 25000
+			# Play Battery Low Sound Effect 
+		#mpg123 ~/system_utils/assets/battery_low_sound.mp3 &
+		paplay ~/system_utils/assets/internet_connection_established.wav &
+	
+else
+    echo "No internet connection"
+    notify-send -u critical "Alert" "Internet is Not Working" -t 25000
+fi
+
+# sleep
+sleep 10
+done

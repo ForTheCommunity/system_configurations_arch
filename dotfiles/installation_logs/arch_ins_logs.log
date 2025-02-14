@@ -4,7 +4,7 @@
 # using different methods...
 
 # installing hyprland WM.
-sudo pacman -S  hyprland hyprpaper  rofi swww waybar
+sudo pacman -S  hyprland hyprpaper hyprlock rofi waybar
 
 # Notification on Wayland using Mako daemon and notify-send
 sudo pacman -S mako
@@ -21,12 +21,11 @@ sudo pacman -S bluez bluez-utils
 
 
 # Screenshot
-sudo pacman -S grim slurp
-
+sudo pacman -S grim slurp swappy
 
 
 # installing terminals
-sudo pacman -S terminator
+sudo pacman -S terminator xterm
 sudo pacman -S alacritty zellij
 # Yazi
 sudo pacman -S yazi ffmpeg p7zip jq poppler fd ripgrep fzf zoxide imagemagick
@@ -40,35 +39,13 @@ pacman -S lsd
 sudo pacman -S thunar
 
 
-# AppImage
- sudo pacman -S fuse2
+# Other utils
+sudo pacman -S fastfetch htop btop wget brightnessctl tree nload
 
-
-# Flatpak
-# KernelLevel Config for flatpak
-# sudo su
-# nano /ect/sysctl.conf
-# paste kernel.unprivileged_userns_clone=1
-# sysctl -p
-
-sudo pacman -S flatpak
-# flatpak install flathub org.mozilla.firefox
-# flatpak install flathub org.inkscape.Inkscape
-# flatpak install flathub org.kde.okular
-# flatpak install flathub io.gitlab.librewolf-community
-
-sudo pacman -S nano vim
-
-sudo pacman -S neofetch
-
-sudo pacman -S htop btop wget brightnessctl tree nload
 
 
 # Editors/Ides and theirs deps
-sudo pacman -S fd  wl-clipboard git less git-lfs neovim helix
-
-# Vscode
-sudo pacman -S code
+sudo pacman -S fd  wl-clipboard git less git-lfs nano vim neovim helix zed code lapce emacs
 
 # Node (Dependency of NeoVim)
 # wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
@@ -126,7 +103,6 @@ sudo pacman -S bc
 
 # Torrent
 sudo pacman -S qbittorrent
-sudo pacman -S rtorrent xterm
 
 # Unzip
 pacman -S unzip
@@ -146,11 +122,22 @@ pacman -S ninja cmake
 # DNS Resolver 
 pacman -S dog
 
-# Cheese
-flatpak install flathub org.gnome.Cheese
 
 # Matrix Like Effect
 pacman -S cmatrix
 
 #Bat
 pacman -S bat
+
+
+# NuShell
+pacman -S nushell
+
+
+
+# AppImage
+ sudo pacman -S fuse2
+# Installed AppImage Manager (Installed System Wide (Root) , Not user wide)
+wget -q https://raw.githubusercontent.com/ivan-hc/AM/main/AM-INSTALLER && chmod a+x ./AM-INSTALLER && ./AM-INSTALLER
+# Installed AppImages Using AppImage Manager
+am install keepassxc draw.io localsend ferdium freetube firefox librewolf retroshare inkscape sioyek

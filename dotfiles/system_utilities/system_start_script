@@ -1,0 +1,30 @@
+#!/bin/bash
+
+
+# Set the mount point to check
+MOUNT_POINT="/media/disks/HardDisk"
+
+
+
+
+
+# Check if the mount point is in the list of mounted filesystems
+if mount | grep -q "${MOUNT_POINT} "; then
+	notify-send -u critical "Info" "Hardisk is Mounted at --->> ${MOUNT_POINT}" -t 10000
+else
+	notify-send -u critical "Info" "Hardisk isn't Mounted at --->> ${MOUNT_POINT}" -t 10000
+	notify-send -u critical "Info" "Preparing to Mount Hardisk at --->> ${MOUNT_POINT}" -t 10000
+    	 alacritty -e bash -c "
+	 source ~/system_utils/system_start_script_helpers &&
+	 echo '<<<<< Updating System >>>>>'; update_system &&
+	 echo '<<<<< Mounting Hardisk >>>>>'; mount_hardisk &&
+	 echo '<<<<< Enabling Flatpak >>>>>'; enable_flatpak &&
+	 echo '<<<<< Starting QBittorrent >>>>>'; start_qbittorrent"
+fi
+
+
+
+
+ # Chain all commands inside the same Alacritty terminal with sudo 
+#    alacritty -e bash -c "echo 'Mounting Hardisk'; sudo ${MOUNT_SCRIPT} && echo 'Enabling Flatpak'; sudo ${ENABLE_FLATPAK} && echo 'Updating system'; update_system && echo 'Checking qbittorrent'; start_qbittorrent "
+#

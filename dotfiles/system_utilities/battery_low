@@ -7,8 +7,8 @@ do
 # To send notifictaion on Active Window...
 export DISPLAY=:0
 
-battery_percentage=$(cat /sys/class/power_supply/BAT0/capacity)
-battery_status=$(cat /sys/class/power_supply/BAT0/status)
+battery_percentage=$(/bin/cat /sys/class/power_supply/BAT0/capacity)
+battery_status=$(/bin/cat /sys/class/power_supply/BAT0/status)
 
 # echo "testing"
 # echo $battery_percentage
@@ -21,7 +21,7 @@ if [ -n "$battery_status" ] && [ "$battery_status" = "Discharging" ]; then
 		notify-send -u critical "Emergency" "Battery level is $battery_percentage % - $battery_status" -t 25000
 		# Play Battery Low Sound Effect 
 		#mpg123 ~/system_utils/assets/battery_low_sound.mp3 &
-		paplay ~/system_utils/assets/battery_low_sound.mp3 &
+		paplay ~/system_utils/assets/low_battery.wav &
 	fi
 fi
 
