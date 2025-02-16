@@ -1,4 +1,4 @@
-mkdir -p ~/.config/{nvim,alacritty,terminator,waybar,hypr}
+mkdir -p ~/.config/{nvim,alacritty,terminator,waybar,hypr,helix}
 mkdir -p ~/system_utils
 
 stow -t ~/.config/nvim nvim
@@ -8,6 +8,6 @@ stow -t ~/.config/terminator terminator
 stow -t ~/.config/waybar waybar
 stow -t ~/.config/hypr hyprland
 stow -t ~/ bashrc
-stow -t ~/ installation_logs
+stow -t ~/ Install_Packages
 stow -t ~/system_utils system_utilities
 
