@@ -1,4 +1,4 @@
-#  pacman -Qi "$1" &> /dev/null !/bin/bash
+#!/bin/bash
 
 set -e  # Exit immediately if a command exits with a non-zero status
 
@@ -12,14 +12,14 @@ install_package() {
 	# Check if the package is outdated 
 	if pacman -Qu "$package" &>/dev/null; then
 		echo "Upgrading: $package"
-            	sudo pacman -S --noconfirm "$package"
+            	sudo pacman -S "$package" --noconfirm 
 	else
 		echo "$package is already installed and up-to-date."
 	fi
 	else
 		echo "$package is not installed"
 	        echo "Installing: $package"
-        	sudo pacman -S --noconfirm "$package"
+        	sudo pacman -S  "$package" --noconfirm
 	fi
 }
 
@@ -104,38 +104,6 @@ install_package cmatrix
 install_package gnome-podcasts
 
 
-# Editors/Ides and theirs deps
-install_package fd
-install_package wl-clipboard
-install_package git
-install_package less
-install_package git-lfs
-install_package nano
-install_package vim
-install_package neovim
-install_package helix
-install_package zed
-install_package code
-install_package lapce
-install_package emacs
-
-
-
-# WatchExec - Upgrade/Improved Version of Cargo Watch
-install_package watchexec
-
-
-
-# Install Clang and ClangD....
-install_package clang
-
-
-
-# Zig & Zls
-install_package zig
-install_package zls
-
-
 
 # image viewer and Video Player..
 install_package ristretto
@@ -174,9 +142,6 @@ install_package qbittorrent
 # Libreoffice
 install_package libreoffice-fresh
 
-# Opensource build of Vscode
-install_package code
-
 
 # Flutter Dependencies
 install_package ninja
@@ -196,31 +161,56 @@ install_package fuse2
 install_package fuse3
 
 
-# Manually Installation
-echo "____________________________________________________"
-echo "Manuall Installation Required."
-echo "____________________________________________________"
+# _____________________DEVELOPMENT_PACKAGES_______________________________
+
+
+
+# Editors/Ides and theirs deps
+install_package fd
+install_package wl-clipboard
+install_package git
+install_package less
+install_package git-lfs
+install_package nano
+install_package vim
+install_package neovim
+install_package helix
+install_package zed
+# Opensource build of Vscode
+install_package code
+install_package lapce
+install_package emacs
+
+
+
+# WatchExec - Upgrade/Improved Version of Cargo Watch
+install_package watchexec
+
+
+
+# Install Clang and ClangD....
+install_package clang
+
+
+
+# Zig & Zls
+install_package zig
+install_package zls
+
+# NodeJs
+install_package nodejs
+
+
+# RustUp
+install_package rustup
+rustup install stable
+rustup component add rust-analyzer
 
 echo "
 # Installed AppImage Manager (Installed System Wide (Root) , Not user wide)
 wget -q https://raw.githubusercontent.com/ivan-hc/AM/main/AM-INSTALLER && chmod a+x ./AM-INSTALLER && ./AM-INSTALLER
 # Installed AppImages Using AppImage Manager
-am install keepassxc draw.io localsend ferdium freetube firefox librewolf retroshare inkscape sioyek
+am install keepassxc draw.io localsend ferdium freetube firefox librewolf retroshare inkscape sioyek rhythmbox
 "
 
-echo "____________________________________________________"
 
-
-echo "
-# Node (Dependency of NeoVim)
-# wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
-# nvm install node
-"
-
-echo "____________________________________________________"
-echo "
-# Installing RUST
-# curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-# rustup component add rust-analyzer
-"
-echo "____________________________________________________"

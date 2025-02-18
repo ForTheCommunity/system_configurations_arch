@@ -7,6 +7,7 @@ stow -t ~/.config/alacritty alacritty
 stow -t ~/.config/terminator terminator
 stow -t ~/.config/waybar waybar
 stow -t ~/.config/hypr hyprland
+stow -t ~/.config/rofi rofi
 stow -t ~/ bashrc
 stow -t ~/ Install_Packages
 stow -t ~/system_utils system_utilities

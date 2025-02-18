@@ -1,0 +1,1 @@
+cat theme_name.rasi > MyTheme.rasi
