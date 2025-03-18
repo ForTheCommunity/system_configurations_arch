@@ -34,6 +34,8 @@ install_package hyprland
 install_package hyprpaper
 install_package hyprlock
 
+# Cosmic DE
+install_package cosmic
 
 install_package rofi
 install_package waybar
@@ -102,7 +104,7 @@ install_package unzip
 install_package bc 
 install_package cmatrix
 install_package gnome-podcasts
-
+install_package man
 
 
 # image viewer and Video Player..
@@ -210,7 +212,9 @@ echo "
 # Installed AppImage Manager (Installed System Wide (Root) , Not user wide)
 wget -q https://raw.githubusercontent.com/ivan-hc/AM/main/AM-INSTALLER && chmod a+x ./AM-INSTALLER && ./AM-INSTALLER
 # Installed AppImages Using AppImage Manager
-am install keepassxc draw.io localsend ferdium freetube firefox librewolf retroshare inkscape sioyek rhythmbox
+am install keepassxc draw.io localsend ferdium freetube firefox librewolf retroshare inkscape sioyek rhythmbox jetbrains-toolbox zen-browser tutanota thunderbird
+
+# Installed Rust Rover Using Jetbrains-Toolbox
 "
 
 

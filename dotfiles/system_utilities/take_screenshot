@@ -10,10 +10,14 @@ mkdir -p "$SAVE_DIR"
 # Generate a unique filename with the current date and time
 FILE_NAME="screenshot_$(date +'%Y-%m-%d_%H-%M-%S').png"
 
+
 # using slurp with grim so that slurp will help to select specific region..
 # and swappy will allow for further modification of the screenshot
 grim -g "$(slurp)" -t png -l 0 -c - | swappy -f - -o "$SAVE_DIR/$FILE_NAME"
 
+# Copy the screenshot to the clipboard
+wl-copy < "$SAVE_DIR/$FILE_NAME"
 
 # Notify user
-notify-send "Screenshot Saved" "Path -> ~/Pictures/Screenshots/$FILE_NAME" -t 10000 
+notify-send "Screenshot Saved" "Path -> ~/Pictures/Screenshots/$FILE_NAME" -t 10000
+notify-send "Screenshot Copied to Clipboard." -t 10000 

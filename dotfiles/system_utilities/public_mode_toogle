@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Check if waybar is already running
+WAYBAR_PID=$(pidof waybar)
+
+if [ -n "$WAYBAR_PID" ]; then
+	# echo "Waybar is already running with PID: $WAYBAR_PID. Killing it..."
+	kill $WAYBAR_PID
+	sleep 1  # Give it time to terminate
+else 
+	# echo "enabling waybar"
+	waybar &
+fi

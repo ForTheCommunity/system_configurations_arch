@@ -35,6 +35,8 @@ update_system(){
 	# Updating AppImages
 	notify-send -u critical "Info" "Updating AppImages..." -t 10000
 	am -s
+	am -u
+	am reinstall
 	notify-send -u critical "Info" "System Updated..." -t 10000
 }
 

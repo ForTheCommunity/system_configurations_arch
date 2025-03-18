@@ -18,7 +18,7 @@ sh ~/system_configurations_arch/dotfiles/system_utilities/remaining_days
 
 # customs
 #PS1='[\u@\h \W]\$ '
-PS1=' \u : \W : $ '
+PS1='--->> \u --->> \W --->> $ '
 
 
 
